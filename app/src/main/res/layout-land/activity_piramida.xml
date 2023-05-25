@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".piramida">
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="goBack"
+        android:text="← Back"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <TextView
+        android:id="@+id/tab_name_pir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="16dp"
+        android:text="Пирамида"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/So_pir"
+        android:layout_width="66dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="56dp"
+        android:text="So = "
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <EditText
+        android:id="@+id/So_pir_in"
+        android:layout_width="765dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+
+        android:ems="10"
+        android:hint="Введите S осн."
+        android:inputType="number|numberDecimal"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/So_pir"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <EditText
+        android:id="@+id/h_pir_in"
+        android:layout_width="761dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Введите высоту"
+        android:inputType="number|numberDecimal"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/h_pir"
+        app:layout_constraintTop_toBottomOf="@+id/So_pir_in" />
+
+    <TextView
+        android:id="@+id/h_pir"
+        android:layout_width="52dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:text="h ="
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/So_pir" />
+
+    <Button
+        android:id="@+id/count_v_pir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="372dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#FA9C7F"
+        android:onClick="count_pir"
+        android:text="Расчет"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/h_pir_in" />
+
+    <TextView
+        android:id="@+id/count_pir"
+        android:layout_width="591dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/v_pir"
+        app:layout_constraintTop_toBottomOf="@+id/count_v_pir" />
+
+    <TextView
+        android:id="@+id/v_pir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="V = 1/3 * So * h ="
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/count_v_pir" />
+</androidx.constraintlayout.widget.ConstraintLayout>
